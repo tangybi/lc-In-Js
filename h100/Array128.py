@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Set
 
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
@@ -6,7 +6,7 @@ class Solution:
         if not nums:
             return 0
 
-        nums = set(nums)
+        nums:Set[int] = set(nums)
         l = 1
         for num in nums:
             if num - 1 not in nums:
