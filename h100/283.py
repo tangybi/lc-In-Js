@@ -6,6 +6,7 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         # 思路：双指针
+        # 初步：先删除0再补0，缺点：delete操作会增加复杂度最多n-1，性能❌
         left = 0
         for right in range(0,len(nums)):
             if(nums[right] != 0):

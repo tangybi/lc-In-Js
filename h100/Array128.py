@@ -6,13 +6,13 @@ class Solution:
         if not nums:
             return 0
 
-        nums:Set[int] = set(nums)
+        numsS:Set[int] = set(nums)
         l = 1
-        for num in nums:
-            if num - 1 not in nums:
+        for num in numsS:
+            if num - 1 not in numsS:
                 c_n = num
                 c_l = 1
-                while c_n + 1 in nums:
+                while c_n + 1 in numsS:
                     c_n += 1
                     c_l += 1
                 l = max(l, c_l)
